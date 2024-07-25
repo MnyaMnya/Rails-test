@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <h1 class="normal"><%= link_to "Baban web", root_path %></h1>
+    <%= render "header", article: @article %>
     <%= yield %>
   </body>
 </html>
