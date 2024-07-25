@@ -13,40 +13,44 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20Tifinagh:700|Noto%20Sans%20Tifinagh:400');
+
+@import "var.css";
+@import "header.css";
+@import "link.css";
+
 body {
-	background-color: white;
+	background-color: var(--background);
 	margin: 0;
-}	
+	color: var(--text);
+}
+
 ul{
-	background-color: aqua;
-	width: 40%;
-	border-width: 5%;
-	border-color: red;
+	border-width: 0.5em;
+	border-color: var(--primary);
 	border-style: solid;
-	padding: 5%;
+	border-radius: 3rem;
+	margin-bottom: 4em;
 }
+
+li:last-child{
+	margin-bottom: 1rem;
+}
+
+li:first-child{
+	margin-top: 1rem;
+}
+
+ul li{
+	padding-bottom: 1em;
+	text
+}
+
 h1{
-	color: red;
-}
-.normal {
-    text-transform: none;
+	color: inherit;
 }
 
-.normal a {
-    color: inherit;
-    text-decoration: inherit;
-}
 
-.normal a:hover {
-    color: inherit;
-    text-decoration: inherit;
-    cursor:pointer;  
-}
-.nav {
-	width: 100;
-	margin: 0;
-	background-color: black;
-}
-.nav h1{
-	margin: 0;
-}
+
+
+#https://www.realtimecolors.com/?colors=100e0c-fcfcfb-ad865a-d6b999-d4a876&fonts=Noto%20Sans%20Tifinagh-Noto%20Sans%20Tifinagh

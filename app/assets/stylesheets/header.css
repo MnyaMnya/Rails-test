@@ -1,0 +1,11 @@
+.nav {
+	width: 100;
+	margin: 0;
+	background-color: inherit;
+	border-bottom:grey solid 0.1em;
+	margin-bottom: 4em;
+}
+
+.nav h1{
+	margin: 0;
+}

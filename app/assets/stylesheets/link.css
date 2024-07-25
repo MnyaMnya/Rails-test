@@ -1,0 +1,14 @@
+.normal {
+    text-transform: none;
+}
+
+.normal a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.normal a:hover {
+    color: inherit;
+    text-decoration: inherit;
+    cursor:pointer;  
+}
