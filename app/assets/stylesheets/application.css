@@ -25,7 +25,7 @@ body {
 	color: var(--text);
 }
 
-ul{
+.content{
 	border-width: 0.5em;
 	border-color: var(--primary);
 	border-style: solid;
