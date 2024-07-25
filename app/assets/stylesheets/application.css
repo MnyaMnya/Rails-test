@@ -24,22 +24,37 @@ body {
 	margin: 0;
 	color: var(--text);
 }
+.center{
+	text-align: center;
+}
 
 .content{
-	border-width: 0.5em;
-	border-color: var(--primary);
-	border-style: solid;
-	border-radius: 3rem;
+	display: flex;
+	flex-direction: row;
+	background-color: var(--primary);
 	margin-bottom: 4em;
+	margin-left: 7%;
+	margin-right: 7%;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	padding-right: 3%;
+	padding-left: 3%;
+
 }
 
-li:last-child{
-	margin-bottom: 1rem;
+
+.list{
+	background-color: var(--secondary);
+	font-size: 1.333rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+	min-width: 15rem;
 }
 
-li:first-child{
-	margin-top: 1rem;
-}
 
 ul li{
 	padding-bottom: 1em;
@@ -50,7 +65,14 @@ h1{
 	color: inherit;
 }
 
-
+@media (max-width: 800px) {
+  .content {
+    flex-direction: column;
+  }
+  .list{
+  	min-width: inherit;
+  }
+}
 
 
 #https://www.realtimecolors.com/?colors=100e0c-fcfcfb-ad865a-d6b999-d4a876&fonts=Noto%20Sans%20Tifinagh-Noto%20Sans%20Tifinagh

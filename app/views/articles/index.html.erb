@@ -1,10 +1,9 @@
 <div class="content">
-<ul>
 	<% @articles.each do |article| %>
-	<li  class="normal">
+	<div  class="normal list big-font center">
+
 		<%= link_to article.title, article %>
-	</li>
+	</div>
 	<% end %>
-</ul>
 </div>
 <%= link_to "New Article", new_article_path %>
