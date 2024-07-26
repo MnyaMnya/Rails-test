@@ -1,4 +1,4 @@
-<h2><%= @article.title %></h2>
+<h3>Title: <%= @article.title %></h3>
 
 <p><%= @article.body %></p>
 
@@ -11,6 +11,22 @@
                         method: :delete, 
                         data: { confirm: 'Are you sure?' } %>
 </div>
+
+<h3>Comments</h3>
+<% @article.comments.each do |comment| %>
+<div class=comment>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+  </div>
+<% end %>
+
 
 <h3>Add a comment:</h3>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>

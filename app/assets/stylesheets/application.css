@@ -20,9 +20,9 @@
 @import "link.css";
 
 body {
-	background-color: var(--background);
+	background-color: var(--background-100);
 	margin: 0;
-	color: var(--text);
+	color: var(--text-900);
 }
 .center{
 	text-align: center;
@@ -31,7 +31,6 @@ body {
 .content{
 	display: flex;
 	flex-direction: row;
-	background-color: var(--primary);
 	margin-bottom: 4em;
 	margin-left: 7%;
 	margin-right: 7%;
@@ -39,12 +38,12 @@ body {
 	padding-top: 1rem;
 	padding-right: 3%;
 	padding-left: 3%;
-
+	
 }
 
 
 .list{
-	background-color: var(--secondary);
+	background-color: var(--secondary-500);
 	font-size: 1.333rem;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -53,12 +52,12 @@ body {
 	margin-bottom: 0.5rem;
 	margin-top: 0.5rem;
 	min-width: 15rem;
+	border-radius: 10%;
 }
 
 
 ul li{
 	padding-bottom: 1em;
-	text
 }
 
 h1{
@@ -75,4 +74,4 @@ h1{
 }
 
 
-#https://www.realtimecolors.com/?colors=100e0c-fcfcfb-ad865a-d6b999-d4a876&fonts=Noto%20Sans%20Tifinagh-Noto%20Sans%20Tifinagh
+/*https://www.realtimecolors.com/?colors=100e0c-fcfcfb-ad865a-d6b999-d4a876&fonts=Noto%20Sans%20Tifinagh-Noto%20Sans%20Tifinagh*/
