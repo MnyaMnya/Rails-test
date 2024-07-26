@@ -38,9 +38,13 @@
 
 @media (max-width: 800px) {
 	body{
-		font-size: 75%;
+		font-size: 70%;
 	}
 	.navbar li{
 		padding: 2% 3%;
+		margin-right: 2%;
 	}
+	.navbar li:first-child{
+		margin-left: 5%;
+}
 }
