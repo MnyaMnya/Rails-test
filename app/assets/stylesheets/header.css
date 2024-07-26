@@ -3,20 +3,32 @@
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: var(--accent-200);
+	/*background-color: var(--accent-200);*/
+	box-shadow: 0 0 10px black;
 	margin-bottom: 10vh;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	font-size: 120%;
   }
   
   .navbar li {
 	min-width: 5em;
-	float: left;
+	float: right;
 	display: block;
 	text-align: center;
-	padding: 14px 16px;
-	border-right: var(--primary-800) solid 0.3em;
+	padding: 1% 2%;
+	border: 0.1em var(--secondary-500) solid;
+	border-radius: 1em;
 	text-decoration: none;
-	
-	
+	margin-right: 5%;
+  }
+
+  .navbar li:first-child{	
+  	float: left;
+  	margin-left: 10%;
+  	background-color: var(--accent-500);
+  	border-radius: 1em;
+  	border: 0;
   }
   
   .navbar li a {
@@ -24,3 +36,11 @@
 	vertical-align: auto;
   } 
 
+@media (max-width: 800px) {
+	body{
+		font-size: 75%;
+	}
+	.navbar li{
+		padding: 2% 3%;
+	}
+}

@@ -1,34 +1,29 @@
-<h3>Title: <%= @article.title %></h3>
+<div class="show-content">
 
-<p><%= @article.body %></p>
+<div class="title">
+  <h3>Title: <%= @article.title %></h3>
+
+  <p><%= @article.body %></p>
+</div>
+
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  
 </ul>
+
+
 <div>
 <%= button_to "Destroy", @article , 
                         method: :delete, 
                         data: { confirm: 'Are you sure?' } %>
 </div>
-
+<div class="comment">
 <h3>Comments</h3>
-<% @article.comments.each do |comment| %>
-<div class=comment>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
+<%= render @article.comments %> 
+</div>
 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-  </div>
-<% end %>
-
-
-<h3>Add a comment:</h3>
+<div class="add_comment">
+<h4>Add a comment:</h4>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
     <%= form.label :commenter %><br>
@@ -42,3 +37,6 @@
     <%= form.submit %>
   </p>
 <% end %>
+</div>
+
+</div>
