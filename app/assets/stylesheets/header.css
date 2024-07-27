@@ -4,7 +4,7 @@
 	padding: 0;
 	overflow: hidden;
 	/*background-color: var(--accent-200);*/
-	box-shadow: 0 0 10px black;
+	box-shadow: 0 0 2px white;
 	margin-bottom: 10vh;
 	padding-top: 0.7em;
 	padding-bottom: 0.7em;
@@ -12,13 +12,10 @@
   }
   
   .navbar li {
-	min-width: 5em;
 	float: right;
 	display: block;
 	text-align: center;
 	padding: 1% 2%;
-	border: 0.1em var(--secondary-500) solid;
-	border-radius: 1em;
 	text-decoration: none;
 	margin-right: 5%;
   }
@@ -26,13 +23,13 @@
   .navbar li:first-child{	
   	float: left;
   	margin-left: 10%;
-  	background-color: var(--accent-500);
+  	font-weight: bold;
   	border-radius: 1em;
   	border: 0;
   }
   
   .navbar li a {
-	color: #000;
+	color: var(--text);
 	vertical-align: auto;
   } 
 
