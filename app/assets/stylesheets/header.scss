@@ -9,29 +9,29 @@
 	padding-top: 0.7em;
 	padding-bottom: 0.7em;
 	font-size: 120%;
-  }
-  
-  .navbar li {
-	float: right;
-	display: block;
-	text-align: center;
-	padding: 1% 2%;
-	text-decoration: none;
-	margin-right: 5%;
+
+	li{
+		float: right;
+		display: block;
+		text-align: center;
+		padding: 1% 2%;
+		text-decoration: none;
+		margin-right: 5%;
+
+		&:first-child{
+			float: left;
+  			margin-left: 10%;
+  			font-weight: bold;
+  			border-radius: 1em;
+  			border: 0;
+  			a{
+  				color: var(--text);
+				vertical-align: auto;
+  			}
+		}
+	}
   }
 
-  .navbar li:first-child{	
-  	float: left;
-  	margin-left: 10%;
-  	font-weight: bold;
-  	border-radius: 1em;
-  	border: 0;
-  }
-  
-  .navbar li a {
-	color: var(--text);
-	vertical-align: auto;
-  } 
 
 @media (max-width: 800px) {
 	body{

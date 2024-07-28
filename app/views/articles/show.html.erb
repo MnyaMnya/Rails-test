@@ -9,14 +9,14 @@
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
+    <li><%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
 </ul>
 
 
-<div>
-<%= button_to "Destroy", @article , 
-                        method: :delete, 
-                        data: { confirm: 'Are you sure?' } %>
-</div>
+
 <div class="comment">
 <h3>Comments</h3>
 <%= render @article.comments %> 
@@ -24,19 +24,6 @@
 
 <div class="add_comment">
 <h4>Add a comment:</h4>
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-</div>
+<%= render 'comments/form' %>
 
 </div>

@@ -15,10 +15,10 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20Tifinagh:700|Noto%20Sans%20Tifinagh:400');
 
-@import "var.css";
-@import "header.css";
+@import "var.scss";
+@import "header.scss";
 @import "link.scss";
-@import "comment.css";
+@import "comment.scss";
 
 body {
 	background-color: var(--background);
