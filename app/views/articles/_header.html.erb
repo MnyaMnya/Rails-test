@@ -1,7 +1,7 @@
 <nav>
   <ul class="navbar">
-    <li class="menu"><div class="normal"><%= link_to "Baban Web", root_path %></div></li>
-    <li ><a href="#"class="normal"><%= Article.public_count %></a></li>
-   <li > <a href="#"class="normal">Services</a></li>
+    <li class="menu"><div class="normal"><a href="<%=root_path%>"><%= render 'text-anim' %></div></a></li>
+    <li ><%= Article.public_count %></li>
+   <li > Services</li>
   </ul>
 </nav> 
