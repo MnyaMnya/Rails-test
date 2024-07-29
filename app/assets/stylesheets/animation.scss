@@ -1,0 +1,54 @@
+$stagger-delay:200;
+@for $i from 1 through 11 {
+
+    .animation .isi:nth-child(#{$i}n) {
+        -webkit-animation-delay:#{$i * $stagger-delay}ms;
+        animation-delay:#{$i * $stagger-delay}ms;
+        -moz-animation-delay:#{$i * $stagger-delay}ms;	
+
+    }
+}
+.animation{
+	display: inline;
+}
+.animation .isi{
+  animation-name: typewriter;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+   animation-fill-mode: forwards;  
+
+  font-size: 0%;
+  span{
+  	margin: none
+  }
+}
+.garis{
+	font-size: inherit;
+	animation-name: garis;
+	animation-timing-function:steps(2,end);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay:$stagger-delay;
+}
+
+
+@keyframes typewriter{
+	0%{
+		color: white;
+		font-size: inherit;
+	}
+	100%{
+		
+		font-size: inherit;
+	}
+
+}
+@keyframes garis{
+	0%{
+		color: white;
+		opacity: 0;
+	}
+	100%{
+		color: white;
+	}
+}
