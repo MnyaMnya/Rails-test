@@ -20,22 +20,14 @@
 @import "link.scss";
 @import "comment.scss";
 @import "animation.scss";
+@import "set.scss";
+@import "table.scss";
 
-body {
-	background-color: var(--background);
-	margin: 0;
-	color: var(--text);
-}
-.center{
-	text-align: center;
-}
 
 .content{
-	display: flex;
 	flex-direction: row;
 	margin-bottom: 4em;
-	margin-left: 7%;
-	margin-right: 7%;
+
 	padding-bottom: 1rem;
 	padding-top: 1rem;
 	padding-right: 3%;
@@ -44,7 +36,7 @@ body {
 }
 
 
-.list{
+/*.list{
 	background-color: var(--secondary);
 	font-size: 1.333rem;
 	padding-top: 1rem;
@@ -55,7 +47,7 @@ body {
 	margin-top: 0.5rem;
 	min-width: 15rem;
 	border-radius: 10%;
-}
+}*/
 
 
 ul li{
@@ -72,9 +64,7 @@ h1{
 /*https://www.realtimecolors.com/?colors=100e0c-fcfcfb-ad865a-d6b999-d4a876&fonts=Noto%20Sans%20Tifinagh-Noto%20Sans%20Tifinagh*/
 
 @media (max-width: 800px) {
-  .content {
-    flex-direction: column;
-  }
+
   .list{
   	min-width: inherit;
   }

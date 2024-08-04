@@ -1,10 +1,28 @@
 <div class="content">
+	<table class="normal list big-font">
+		<%index = 0%>
+	<tr>
+		<th>No</th>
+		<th>Article</th>
+		<th>Description</th>
+		<th>Action</th>
+	</tr>	
 	<% @articles.each do |article| %>
 	 <% unless article.archived? %>
-	<div class="normal list big-font center">
-		<%= link_to article.title, article %>
-	</div>
+	 <%index = index+1%>
+	<tr>
+		<td><%=index%></td>
+		<td class="column-med"><%=article.title%></br></td>
+		<td class="column-big"><%= article.body%></td>
+		<td class="column-small"><%= link_to "Show", article%> <%= link_to "Edit", edit_article_path(article)%> <%= link_to "Destroy", article_path(article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></td>
+	</tr>
 	<% end %>
 	<% end %>
+	</table>
 </div>
+<p class="normal left_padded">
 <%= link_to "New Article", new_article_path %>
+</p>

@@ -2,6 +2,6 @@
   <ul class="navbar">
     <li class="menu"><div class="normal"><a href="<%=root_path%>"><%= render 'text-anim' %></div></a></li>
     <li ><%= Article.public_count %></li>
-   <li > Services</li>
+   <li class="normal"> <%= link_to "Friends",friends_path%></li>
   </ul>
 </nav> 
