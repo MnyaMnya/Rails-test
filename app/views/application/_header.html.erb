@@ -2,6 +2,12 @@
   <ul class="navbar">
     <li class="menu"><div class="normal"><a href="<%=root_path%>"><%= render 'text-anim' %></div></a></li>
     <li ><%= Article.public_count %></li>
-   <li class="normal"> <%= link_to "Friends",friends_path%></li>
+    <% if user_signed_in? %>
+   <li class="normal"> 
+    <%= link_to Current.user.username,friends_path%></li>
+    <% else %>
+     <li class="normal"> 
+    <%= link_to "Guest",friends_path%></li>
+    <% end %>
   </ul>
 </nav> 

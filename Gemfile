@@ -67,3 +67,4 @@ group :test do
 end
 
 gem "sass-rails", "~> 6.0"
+gem 'bcrypt', '~> 3.1.7'

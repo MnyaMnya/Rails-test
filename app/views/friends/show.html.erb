@@ -1,7 +1,9 @@
 <p style="color: green"><%= notice %></p>
+<table id="<%= dom_id @friend %>">
+  <%= render "friendtable" %>
 
 <%= render @friend %>
-
+</table>
 <div>
   <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
   <%= link_to "Back to friends", friends_path %>

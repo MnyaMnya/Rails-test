@@ -1,5 +1,4 @@
 class FriendsController < ApplicationController
-  http_basic_authenticate_with name: "Admin", password: "2340"
   before_action :set_friend, only: %i[ show edit update destroy ]
 
   # GET /friends or /friends.json
