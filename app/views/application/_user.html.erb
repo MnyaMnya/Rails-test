@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
       <%= link_to "Edit Password", "#" %>
-      <%= button_to "Log Out", session_path,method: :delete %>
+      <li class="normal"> <%= button_to "Log Out", session_path,method: :delete %></li>
       <% else %>
-        <%= link_to "Sign Up", new_registration_path %>
-        <%= link_to "Log In", new_session_path %>
+        <li class="normal"> <%= link_to "Sign Up", new_registration_path %></li>
+        <li class="normal">  <%= link_to "Log In", new_session_path %> </li>
       <% end %>

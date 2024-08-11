@@ -8,12 +8,16 @@
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
-
+<%if session[:username] == comment.commenter || (session[:username] == nil&&comment.commenter == "Guest")%>
 <p>
 <%= link_to "Destroy Comment", [comment.article, comment], data: {
                   turbo_method: :delete,
                   turbo_confirm: "Are you sure?"
                 } %>
   </p>
+<% else %>
 
+hello
+
+<% end %>
 <% end %>
