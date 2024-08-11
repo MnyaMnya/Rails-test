@@ -1,7 +1,11 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
     <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
+    <% if session[:username] != nil %>
+    <%= form.text_field :commenter, value:session[:username],:readonly => true%>
+    <% else %>
+    <%= form.text_field :commenter, value:"Guest",:readonly => true%>
+    <% end %>
   </p>
   <p>
     <%= form.label :body %><br>

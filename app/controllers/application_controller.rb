@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-before_action :set_current_user, if: :user_signed_in?
+before_action :set_current_user, if: :user_signed_in?	
 	private
 
 	def set_current_user
@@ -13,7 +13,7 @@ before_action :set_current_user, if: :user_signed_in?
 
 	def authenticate_user_from_session
 		User.find_by(id: session[:user_id])
-	end
+	end	
 
 	def user_signed_in?
 		current_user.present?
@@ -27,6 +27,7 @@ before_action :set_current_user, if: :user_signed_in?
 		Current.user = user
 		reset_session
 		session[:user_id] = user.id
+		session[:username] = user.username
 	end
 
 	def logout(user)

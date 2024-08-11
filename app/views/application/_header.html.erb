@@ -4,7 +4,8 @@
     <li ><%= Article.public_count %></li>
     <% if user_signed_in? %>
    <li class="normal"> 
-    <%= link_to Current.user.username,friends_path%></li>
+    <% username =session[:username]%>
+    <%= link_to username,friends_path%></li>
     <% else %>
      <li class="normal"> 
     <%= link_to "Guest",friends_path%></li>

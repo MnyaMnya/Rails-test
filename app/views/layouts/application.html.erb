@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    
     <div data-theme="dark">
     <%= render "header"%>
     <div><%=notice%></div>
@@ -17,13 +18,7 @@
     
     
     <%= yield %>
-    <% if user_signed_in? %>
-      <%= link_to "Edit Password", "#" %>
-      <%= button_to "Log Out", session_path,method: :delete %>
-      <% else %>
-        <%= link_to "Sign Up", new_registration_path %>
-        <%= link_to "Log In", new_session_path %>
-      <% end %>
+    <%= render "user"%> 
     </div>
   </body>
 </html>
