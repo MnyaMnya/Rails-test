@@ -6,9 +6,11 @@ font-size: 140%;
 	}
 	.column-med{
 		max-width: 30vw;
+		min-width: 30vw;
 	}
 	.column-big{
 		max-width: 50vw;
+		min-width: 30vw;
 		overflow: hidden;
 	}
 }
