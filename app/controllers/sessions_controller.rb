@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
 			redirect_to root_path, notice: "You have signed succesfully"
 		else
 			flash[:alert] = "Invalid email or password"
+			render :new, status: :unprocessable_entity
 		end
 	end
 
