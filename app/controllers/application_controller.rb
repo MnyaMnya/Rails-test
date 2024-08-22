@@ -5,6 +5,8 @@ before_action :set_current_user, if: :user_signed_in?
 	def authenticate_user!
 		redirect_to root_path, alert: "You must be logged in to do that" unless user_signed_in?
 	end
+
+	
 	def set_current_user
 		Current.user = current_user
 	end

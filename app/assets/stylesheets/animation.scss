@@ -1,5 +1,5 @@
 $stagger-delay:200;
-@for $i from 1 through 11 {
+@for $i from 1 through 7 {
 
     .animation .isi:nth-child(#{$i}n) {
         -webkit-animation-delay:#{$i * $stagger-delay}ms;

@@ -1,0 +1,23 @@
+<h4>Reset Password</h4>
+<%= form_with model: @user, url: password_reset_path(token: params[:token]) do |form| %>
+    <% if form.object.errors.any? %>
+     <% form.object.errors.full_messages.each do |messages|%>
+         <div><% message %></div>
+     <%end%>
+    <%end%>
+
+
+    <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+    </div>
+
+    <div>
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
+    </div>
+
+    <div>
+        <%= form.submit "Reset password" %>
+    </div>
+<%end%>

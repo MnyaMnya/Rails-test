@@ -1,10 +1,13 @@
 <div class="show-content">
 
-<div class="title">
-  <h3>Title: <%= @article.title %></h3>
 
-  <p><%= @article.body %></p>
+  <div class="body-content">
+    <div class="title">
+  <h3>Title: <%= @article.title %></h3>
+  <h4>Owner: <%= @article.owner %></h4>
 </div>
+  <p><%= @article.body %></p>
+
 
 
 <ul>
@@ -15,8 +18,8 @@
                   } %></li>
 </ul>
 
-
-
+</div>
+<div class="comment-content">
 <div class="comment">
 <h3>Comments</h3>
 <%= render @article.comments %> 
@@ -25,5 +28,5 @@
 <div class="add_comment">
 <h4>Add a comment:</h4>
 <%= render 'comments/form' %>
-
+</div>
 </div>

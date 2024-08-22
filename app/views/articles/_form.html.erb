@@ -2,6 +2,14 @@
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
+    <p>
+    <%= form.label :owner %><br>
+    <% if session[:username] != nil %>
+    <%= form.text_field :owner, value:session[:username],:readonly => true%>
+    <% else %>
+    <%= form.text_field :owner, value:"Guest",:readonly => true%>
+    <% end %>
+  </p>
     <% article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
