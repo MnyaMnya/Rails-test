@@ -23,27 +23,7 @@
 @import "set.scss";
 @import "table.scss";
 
-.comment-content, .body-content{
-	margin-left: 10vw;
-	border-radius: 10%;
-	background-color: rgba($color: rgb(0, 0, 0), $alpha: 0.3);
-	max-width: fit-content;
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-top: 3%;
-	padding-bottom: 3%;
-	margin-bottom: 5%;
-}
-.content{
-	flex-direction: row;
-	margin-bottom: 4em;
 
-	padding-bottom: 1rem;
-	padding-top: 1rem;
-	padding-right: 3%;
-	padding-left: 3%;
-	
-}
 
 
 /*.list{
@@ -68,7 +48,10 @@ h1{
 	color: inherit;
 }
 
-
+.article-content{
+	width: 100%;
+	min-height: 30vh;
+}
 
 
 /*https://www.realtimecolors.com/?colors=100e0c-fcfcfb-ad865a-d6b999-d4a876&fonts=Noto%20Sans%20Tifinagh-Noto%20Sans%20Tifinagh*/
@@ -85,3 +68,4 @@ h1{
 }
 
 }
+
