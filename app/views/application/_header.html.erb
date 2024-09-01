@@ -5,10 +5,10 @@
     <% if user_signed_in? %>
    <li class="normal"> 
     <% username =session[:username]%>
-    <%= link_to username,friends_path%></li>
+    <%= link_to username,root_path%></li>
     <% else %>
      <li class="normal"> 
-    <%= link_to "Guest",friends_path%></li>
+    <%= link_to "Guest",root_path%></li>
     <% end %>
     <%= render "user"%> 
   </ul>
