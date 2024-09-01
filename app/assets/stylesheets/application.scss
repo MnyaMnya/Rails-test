@@ -15,13 +15,14 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20Tifinagh:700|Noto%20Sans%20Tifinagh:400');
 
-@import "var.scss";
-@import "header.scss";
-@import "link.scss";
-@import "comment.scss";
-@import "animation.scss";
-@import "set.scss";
-@import "table.scss";
+@import 'var';
+@import 'header';
+@import 'link';
+@import 'comment';
+@import 'animation';
+@import 'set';
+@import 'table';
+
 
 
 
@@ -40,17 +41,17 @@
 }*/
 
 
-ul li{
-	padding-bottom: 1em;
+ul li {
+  padding-bottom: var(--em-small);
 }
 
-h1{
-	color: inherit;
+h1 {
+  color: inherit;
 }
 
-.article-content{
-	width: 100%;
-	min-height: 30vh;
+.article-content {
+  width: var(--size-full);
+  min-height: var(--size-small);
 }
 
 
@@ -58,14 +59,13 @@ h1{
 
 @media (max-width: 800px) {
 
-  .list{
-  	min-width: inherit;
+  .list {
+    min-width: inherit;
   }
 
 
-.show-content{
-	margin-left: 5%;
-}
+  .show-content {
+    margin-left: var(--margin-small);
+  }
 
 }
-

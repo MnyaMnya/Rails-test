@@ -1,0 +1,13 @@
+body {
+  background-color: var(--background);
+  margin: 0;
+  color: var(--text);
+}
+
+.center {
+  text-align: center;
+}
+
+.left_padded {
+  padding-left: var(--margin-big);
+}

@@ -70,3 +70,4 @@ gem "sass-rails", "~> 6.0"
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'pg', '~> 1.5', '>= 1.5.4'
+gem 'dotenv', groups: [:development, :test]

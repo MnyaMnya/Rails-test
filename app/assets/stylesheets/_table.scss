@@ -1,0 +1,39 @@
+table {
+  border: var(--border-small) white solid;
+  font-size: 140%;
+
+  td,
+  th {
+    border: var(--border-small) white solid;
+  }
+
+  .column-med {
+    max-width: var(--size-small);
+    min-width: var(--size-small);
+  }
+
+  .column-big {
+    max-width: var(--size-half);
+    min-width: var(--size-small);
+    overflow: hidden;
+  }
+}
+
+
+
+@media (max-width: 800px) {
+  table {
+    border: 0.07em white solid;
+
+    td,
+    th {
+      border: 0.05em white solid;
+    }
+
+    .column-small {
+      max-width: 5vw;
+    }
+
+    font-size: 100%;
+  }
+}

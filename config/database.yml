@@ -28,8 +28,8 @@ development:
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: supabase_admin
-
+  #username: postgres
+  
   # The password associated with the PostgreSQL role (username).
   #password: postgres-Ibrahimdota2
 
