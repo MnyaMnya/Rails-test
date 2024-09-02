@@ -1,16 +1,19 @@
 .normal {
-    text-transform: none;
-    a {
-        color: inherit;
-        text-decoration: inherit;
+  text-transform: none;
 
-        &:hover{
-            color: inherit;
-            text-decoration: inherit;
-            cursor:pointer;  
+  a {
+    color: inherit;
+    text-decoration: inherit;
 
-        }
+    &:hover,
+    &:active,
+    &:hover,
+    &:visited {
+      color: inherit;
+      text-decoration: inherit;
+      cursor: pointer;
+
     }
-}
 
-   
+  }
+}
