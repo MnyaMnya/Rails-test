@@ -44,17 +44,18 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_20_005856) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
-    t.string "owner"
+    t.bigint "owner_id"
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string "commenter"
+    t.bigint "commenter_id"
     t.text "body"
     t.bigint "article_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
     t.index ["article_id"], name: "index_comments_on_article_id"
+    t.unique_constraint ["commenter_id"], name: "comments_commenter_key"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,5 +66,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_20_005856) do
     t.string "username"
   end
 
+  add_foreign_key "articles", "users", column: "owner_id", name: "articles_owner_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "users", column: "commenter_id", name: "comments_commenter_id_fkey", on_update: :cascade, on_delete: :cascade
 end

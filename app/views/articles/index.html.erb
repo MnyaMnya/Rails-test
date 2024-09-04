@@ -14,7 +14,7 @@
 	<tr>
 		<td><%=index%></td>
 		<td class="column-med"><%=article.title%></br></td>
-		<td class="column-small"><%=article.owner%></td>
+		<td class="column-small"><%=User.find(article.owner_id).username%></td>
 		<td class="column-med"><%= article.body%></td>
 		<td class="column-small"><%= link_to "Show", article%>
 			

@@ -3,11 +3,8 @@
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <p>
-    <%= form.label :owner %><br>
     <% if session[:username] != nil %>
-    <%= form.text_field :owner, value:session[:username],:readonly => true%>
-    <% else %>
-    <%= form.text_field :owner, value:"Guest",:readonly => true%>
+    <%= form.text_field :owner_id, value:session[:user_id],:readonly => true, :type => "hidden"%>
     <% end %>
   </p>
     <% article.errors.full_messages_for(:title).each do |message| %>

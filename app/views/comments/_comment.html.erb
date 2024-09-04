@@ -1,14 +1,14 @@
 <% unless comment.archived? %>
 <p>
   <strong>Commenter:</strong>
-  <%= comment.commenter %>
+  <%= User.find(comment.commenter_id).username %>
 </p>
 
 <p>
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
-<%if session[:username] == comment.commenter || (session[:username] == nil&&comment.commenter == "Guest")%>
+<%if session[:user_id] == comment.commenter_id%>
 <p>
 <%= link_to "Destroy Comment", [comment.article, comment], data: {
                   turbo_method: :delete,

@@ -4,7 +4,7 @@
   <div class="body-content">
     <div class="title">
   <h3>Title: <%= @article.title %></h3>
-  <h4>Owner: <%= @article.owner %></h4>
+  <h4>Owner: <%= User.find(@article.owner_id).username %></h4>
 </div>
   <p><%= @article.body %></p>
 
