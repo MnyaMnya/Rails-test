@@ -1,3 +1,5 @@
+<div class="body-content size-half">
+  
 <h4>Update Password</h4>
 <%= form_with model: current_user, url: password_path do |form| %>
     <% if form.object.errors.any? %>
@@ -7,17 +9,17 @@
     <%end%>
 
     <div>
-    <%= form.label :password_challenge, "Current Password"%>
+    <%= form.label :password_challenge, "Current Password"%><br>
     <%= form.password_field :password_challenge%>
     </div>
 
     <div>
-    <%= form.label :password %>
+    <%= form.label :password %><br>
     <%= form.password_field :password %>
     </div>
 
     <div>
-    <%= form.label :password_confirmation %>
+    <%= form.label :password_confirmation %><br>
     <%= form.password_field :password_confirmation %>
     </div>
 
@@ -25,3 +27,5 @@
         <%= form.submit "Sign Up" %>
     </div>
 <%end%>
+
+</div>

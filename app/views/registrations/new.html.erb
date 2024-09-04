@@ -1,4 +1,6 @@
+<div class="body-content size-half">
 <h4>Sign Up </h4>
+
 <%= form_with model: @user, url: registration_path do |form| %>
     <% if form.object.errors.any? %>
      <% form.object.errors.full_messages.each do |messages|%>
@@ -7,26 +9,31 @@
     <%end%>
 
     <div>
-        <%= form.label :username %>
+        <%= form.label :username %><br>
+
         <%= form.text_field :username %>
     </div>
 
     <div>
-        <%= form.label :email %>
+        <%= form.label :email %><br>
+
         <%= form.email_field :email %>
     </div>
 
     <div>
-    <%= form.label :password %>
+    <%= form.label :password %><br>
+
     <%= form.password_field :password %>
     </div>
 
     <div>
-    <%= form.label :password_confirmation %>
+    <%= form.label :password_confirmation %><br>
+
     <%= form.password_field :password_confirmation %>
     </div>
 
     <div>
         <%= form.submit "Sign Up" %>
     </div>
-<%end%>
+  <%end%>
+  </div>
