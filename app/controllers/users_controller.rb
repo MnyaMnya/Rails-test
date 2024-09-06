@@ -14,14 +14,13 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.update(user_params)
       redirect_to @user
-    flash[:alert] = "You need to login again"
 
+    flash[:alert] = "You need to login again"
        reset_session
     else
       render :edit, status: :unprocessable_entity
     end
  
-
   end
 
 
