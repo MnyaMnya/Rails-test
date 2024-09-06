@@ -3,12 +3,16 @@
 
   <div class="body-content">
     <div class="title">
-  <h3>User Info %></h3>
+  <h3>User Info</h3>
+    </div>
+
+    <p><span class="bold">Email</span><br><%= User.find(session[:user_id]).email %></p>
+
+  <p><span class="bold">Username</span><br><%= User.find(session[:user_id]).username %></p>
+
+<div class="normal">
+<%= link_to "Edit", edit_user_path(@user),class: "normal" %> 
 </div>
-  <p><%= @user.email %></p>
-  <p><%= @user.username %></p>
-
-
 </div>
 
 </div>

@@ -1,0 +1,36 @@
+<div class="show-content">
+
+
+  <div class="body-content">
+    <div class="title">
+  <h3>Edit User Info</h3>
+    </div>
+    <%= form_with model: current_user do |form| %>
+    <% if form.object.errors.any? %>
+     <% form.object.errors.full_messages.each do |message|%>
+         <div><%= message %></div>
+     <%end%>
+    <%end%>
+
+    <div>
+    <%= form.label :username, "Username"%><br>
+    <%= form.text_field :username%>
+    </div>
+
+    <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+    </div>
+
+
+    <div>
+        <%= form.submit "Edit" %>
+    </div>
+<%end%>
+
+
+
+
+</div>
+
+</div>

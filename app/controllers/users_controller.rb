@@ -1,18 +1,33 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!
-	def new
-	end
+ 
+
 	def show
-		@user = User.find(params[:id])
+     @user = User.find(session[:user_id])
+
 	end
 	def edit
-		@user = User.find(params[:id])
-	end
+      @user = User.find(session[:user_id])
+ 	end
+
+  def update
+    @user = current_user
+    if @user.update(user_params)
+      redirect_to @user
+    flash[:alert] = "You need to login again"
+
+       reset_session
+    else
+      render :edit, status: :unprocessable_entity
+    end
+ 
+
+  end
 
 
-	private
+
 
   def user_params
-      params.require(:user).permit(:username, :email)
+    params.require(:user).permit(:username, :email)
   end
 end
