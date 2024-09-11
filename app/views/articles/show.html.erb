@@ -10,7 +10,9 @@
 
 
 
-<ul>
+  <ul>
+    <% if session[:user_id] == @article.owner_id %>
+      
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
     <li><%= link_to "Destroy", article_path(@article), data: {
                     turbo_method: :delete,
@@ -18,15 +20,18 @@
                   } %></li>
 </ul>
 
+    <% end %>
 </div>
 <div class="comment-content">
 <div class="comment">
 <h3>Comments</h3>
 <%= render @article.comments %> 
 </div>
-
+<% if user_signed_in? %>
+  
 <div class="add_comment">
 <h4>Add a comment:</h4>
 <%= render 'comments/form' %>
 </div>
+<% end %>
 </div>

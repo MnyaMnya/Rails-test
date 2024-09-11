@@ -9,6 +9,10 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    unless user_signed_in?
+      redirect_to new_session_path 
+    end
+
     @article = Article.new
   end
 
@@ -24,6 +28,10 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    unless user_signed_in? && session[:user_id] == @article.owner_id
+      redirect_to root_path
+      flash[:alert] = "You are not the owner of this Article"
+    end
   end
 
   def update
@@ -38,9 +46,15 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
+    unless user_signed_in? && session[:user_id] == @article.owner_id
+      redirect_to root_path
+      flash[:alert] = "You are not the owner of this Article"
+    else
 
+    @article.destroy
     redirect_to root_path, status: :see_other
+
+    end
   end
 
   private
