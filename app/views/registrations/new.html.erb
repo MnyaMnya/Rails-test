@@ -3,7 +3,7 @@
 
 <%= form_with model: @user, url: registration_path do |form| %>
     <% if form.object.errors.any? %>
-     <% form.object.errors.full_messages.each do |messages|%>
+     <% form.object.errors.full_messages.each do |message|%>
          <div><% message %></div>
      <%end%>
     <%end%>
